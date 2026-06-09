@@ -1,2 +1,1 @@
-# ROS2-Serving-Robot
-ROS2 자율주행 프로젝트
+# Cafe Serving Robot
