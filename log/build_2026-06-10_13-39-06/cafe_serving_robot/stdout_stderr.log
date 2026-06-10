@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating cafe_serving_robot.egg-info
+writing cafe_serving_robot.egg-info/PKG-INFO
+writing dependency_links to cafe_serving_robot.egg-info/dependency_links.txt
+writing entry points to cafe_serving_robot.egg-info/entry_points.txt
+writing requirements to cafe_serving_robot.egg-info/requires.txt
+writing top-level names to cafe_serving_robot.egg-info/top_level.txt
+writing manifest file 'cafe_serving_robot.egg-info/SOURCES.txt'
+reading manifest file 'cafe_serving_robot.egg-info/SOURCES.txt'
+writing manifest file 'cafe_serving_robot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/rann/projects/ROS2-Serving-Robot/install/cafe_serving_robot/lib/python3.10/site-packages/cafe-serving-robot.egg-link (link to .)
+Installing serving_robot script to /home/rann/projects/ROS2-Serving-Robot/install/cafe_serving_robot/lib/cafe_serving_robot
+
+Installed /home/rann/projects/ROS2-Serving-Robot/build/cafe_serving_robot
+running symlink_data
+creating /home/rann/projects/ROS2-Serving-Robot/install/cafe_serving_robot/share/ament_index
+creating /home/rann/projects/ROS2-Serving-Robot/install/cafe_serving_robot/share/ament_index/resource_index
+creating /home/rann/projects/ROS2-Serving-Robot/install/cafe_serving_robot/share/ament_index/resource_index/packages
+symbolically linking /home/rann/projects/ROS2-Serving-Robot/build/cafe_serving_robot/resource/cafe_serving_robot -> /home/rann/projects/ROS2-Serving-Robot/install/cafe_serving_robot/share/ament_index/resource_index/packages
+symbolically linking /home/rann/projects/ROS2-Serving-Robot/build/cafe_serving_robot/package.xml -> /home/rann/projects/ROS2-Serving-Robot/install/cafe_serving_robot/share/cafe_serving_robot

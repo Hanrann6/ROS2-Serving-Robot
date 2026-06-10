@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+cafe_serving_robot/__init__.py
+cafe_serving_robot/serving_robot_node.py
+cafe_serving_robot.egg-info/PKG-INFO
+cafe_serving_robot.egg-info/SOURCES.txt
+cafe_serving_robot.egg-info/dependency_links.txt
+cafe_serving_robot.egg-info/entry_points.txt
+cafe_serving_robot.egg-info/requires.txt
+cafe_serving_robot.egg-info/top_level.txt
+cafe_serving_robot.egg-info/zip-safe
+resource/cafe_serving_robot

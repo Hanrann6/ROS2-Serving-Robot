@@ -1,0 +1,3 @@
+[console_scripts]
+serving_robot = cafe_serving_robot.serving_robot_node:main
+

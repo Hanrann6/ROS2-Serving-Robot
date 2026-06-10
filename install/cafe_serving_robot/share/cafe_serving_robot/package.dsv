@@ -1,0 +1,9 @@
+source;share/cafe_serving_robot/hook/pythonpath.ps1
+source;share/cafe_serving_robot/hook/pythonpath.dsv
+source;share/cafe_serving_robot/hook/pythonpath.sh
+source;share/cafe_serving_robot/hook/ament_prefix_path.ps1
+source;share/cafe_serving_robot/hook/ament_prefix_path.dsv
+source;share/cafe_serving_robot/hook/ament_prefix_path.sh
+source;../../build/cafe_serving_robot/share/cafe_serving_robot/hook/pythonpath_develop.ps1
+source;../../build/cafe_serving_robot/share/cafe_serving_robot/hook/pythonpath_develop.dsv
+source;../../build/cafe_serving_robot/share/cafe_serving_robot/hook/pythonpath_develop.sh
