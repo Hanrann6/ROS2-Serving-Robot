@@ -10,11 +10,11 @@ class CafeServingRobot(Node):
         super().__init__('cafe_serving_robot')
         
         self.table_coordinates = {
-            'home':    {'x': 0.0,  'y': 0.0,  'z': 0.0, 'w': 1.0},
-            'table_1': {'x': 0.5,  'y': 1.5,  'z': 0.0, 'w': 1.0},
-            'table_2': {'x': 2.5,  'y': 0.5, 'z': 0.0, 'w': 1.0},
-            'table_3': {'x': 3.5, 'y': 2.6,  'z': 0.0, 'w': 1.0},
-            'table_4': {'x': 1.7, 'y': 3.8, 'z': 0.0, 'w': 1.0}
+            'home':    {'x': 1.43,  'y': -1.39,  'z': 0.0, 'w': 1.0},
+            'table_1': {'x': 0.8,  'y': 0.06,  'z': 0.0, 'w': 1.0},
+            'table_2': {'x': 3.15,  'y': -1.3, 'z': 0.0, 'w': 1.0},
+            'table_3': {'x': 4.5, 'y': 0.64,  'z': 0.0, 'w': 1.0},
+            'table_4': {'x': 2.5, 'y': 2.35, 'z': 0.0, 'w': 1.0}
         }
         
         self.is_busy = False # 로봇이 이동 중일 때 중복 주문을 막는 플래그
@@ -28,7 +28,7 @@ class CafeServingRobot(Node):
         # 3. Action Client: Nav2에 자율주행 명령을 내리기 위한 클라이언트
         self.nav_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
         
-        self.get_logger().info('[카페 서빙 로봇 노드] 주문 대기 중...')
+        self.get_logger().info('[카페 서빙 로봇] 주문 대기 중...')
 
     def request_callback(self, msg):
         table_id = msg.data
@@ -79,20 +79,20 @@ class CafeServingRobot(Node):
         status_msg = String()
         
         if target_id != 'home':
-            self.get_logger().info(f'{target_id}번 테이블 도착 완료! 손님께 음료를 전달합니다.')
+            self.get_logger().info(f'{target_id}번 테이블 도착 완료! 손님께 라떼를 전달합니다.')
             
             # /delivery_status 토픽 발행
             status_msg.data = f'arrived_{target_id}'
             self.status_pub.publish(status_msg)
             
             # 5초 동안 손님이 음료를 내리는 시간 대기 (음료 전달 시뮬레이션)
-            self.get_logger().info('5초 후 복귀 주행을 시작합니다...')
-            time.sleep(5.0)
+            self.get_logger().info('3초 후 복귀 주행을 시작합니다...')
+            time.sleep(3.0)
             
             # 카운터(home) 위치로 자동 복귀 명령
             self.send_goal('home')
         else:
-            self.get_logger().info('카운터(Home)에 안전하게 복귀했습니다. 다음 주문을 기다립니다.')
+            self.get_logger().info('카운터에 안전하게 복귀했습니다. 다음 주문을 기다립니다.')
             status_msg.data = 'returned_home'
             self.status_pub.publish(status_msg)
             self.is_busy = False # 플래그 해제하여 새 주문을 받을 수 있는 상태로 전환
