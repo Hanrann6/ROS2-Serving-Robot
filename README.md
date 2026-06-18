@@ -32,7 +32,7 @@
 
 ### Official Documentation
 * [ROS 2 Humble 공식 문서](https://docs.ros.org/en/humble/index.html)
-* [Nav2 (Navigation2) 공식 도큐멘트](https://navigation.ros.org/](https://docs.nav2.org/)
+* [Nav2 (Navigation2) 공식 도큐멘트](https://docs.nav2.org/)
 * [ROBOTIS TurtleBot3 매뉴얼](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
 
 ### Open Source & Communities
